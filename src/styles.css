@@ -1,0 +1,33 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.side-menu {
+  background: white;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  width: 300px;
+  left: -240px;
+  transition: all ease 0.2s;
+  border: 1px solid darkgray;
+  border-radius: 0px 10px 0px 0px;
+  box-shadow: 1px 1px 10px darkgray;
+}
+
+.side-menu.active {
+  left: 0;
+}
+.table-container {
+  width: 50%;
+  margin: 20px 5px 20px 80px;
+}
+.side-info {
+  position: fixed;
+  background: yellow;
+  height: 100%;
+  top: 0;
+  right: 0;
+  width: 30%;
+}
