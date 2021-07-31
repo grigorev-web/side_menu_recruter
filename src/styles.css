@@ -25,13 +25,14 @@
 .side-menu {
   background: white;
   position: fixed;
-  height: 100%;
+
   top: 0;
-  width: 300px;
-  left: -240px;
+  width: 260px;
+  left: -200px;
+  height: 100%;
   transition: all ease 0.2s;
   border: 1px solid darkgray;
-  border-radius: 0px 10px 0px 0px;
+  border-radius: 0px 10px 10px 0px;
   box-shadow: 1px 1px 10px darkgray;
   z-index: 99;
 }
@@ -69,7 +70,7 @@
 }
 
 .side-menu .menu-body {
-  margin: 80px 0;
+  margin: 30px 0;
   text-align: right;
   padding: 0 12px 5px 0;
 }
@@ -87,7 +88,11 @@
   padding: 8px 4px 8px 10px;
 }
 .side-menu.active .menu-body p:hover {
-  background: #e57fa054;
+  background: #e57fa0c2;
+}
+.side-menu.active .menu-body p:hover .menu-icon {
+  color: white;
+  opacity: 1;
 }
 .side-menu.active .menu-body p {
   display: flex;
@@ -109,4 +114,25 @@
 }
 .menu-logo img {
   margin: 0px 2px 2px 2px;
+}
+.side-menu.active .menu-user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu-user {
+  display: none;
+}
+.menu-user svg {
+  font-size: 50px;
+  color: darkgray;
+}
+.menu-user-role {
+  font-weight: 700;
+  color: white;
+  /* border: 1px solid darkgray; */
+  padding: 4px;
+  border-radius: 7px;
+  font-size: 12px;
+  background: #e57fa0;
 }

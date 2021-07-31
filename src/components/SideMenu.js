@@ -5,6 +5,8 @@ import {
   FaHeadset,
   FaSignOutAlt,
   FaTimes,
+  FaUser,
+  FaUserCircle,
   FaUsers,
   FaUserShield
 } from "react-icons/fa";
@@ -37,6 +39,11 @@ export default function SideMenu(props) {
           </div>
         </div>
         <div className="menu-body">
+          <div className="menu-user">
+            <FaUserCircle className="menu-user-logo" />
+            <div className="menu-user-name">Григорьев Д.В.</div>
+            <div className="menu-user-role">Оператор</div>
+          </div>
           <p>
             <FaHeadset className="menu-icon" /> <span>Оператор</span>
           </p>
