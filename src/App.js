@@ -9,9 +9,9 @@ import { initialState } from "./store/initialState";
 export default function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  console.log("state", state.sideMenu.active);
+  //console.log("state", state.sideMenu.active);
   return (
-    <div className="App container">
+    <div className={`App container ${state.sideMenu.active ? "shading" : ""}`}>
       <h1>Hello CodeSandbox</h1>
       <h2>Start editing to see some magic happen!</h2>
       <SideMenu
