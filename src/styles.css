@@ -20,7 +20,7 @@
 
 .App.shading:after {
   opacity: 1;
-  z-index: 2;
+  z-index: 10;
 }
 .side-menu {
   background: white;
@@ -33,7 +33,7 @@
   border: 1px solid darkgray;
   border-radius: 0px 10px 0px 0px;
   box-shadow: 1px 1px 10px darkgray;
-  z-index: 3;
+  z-index: 99;
 }
 
 .side-menu.active {
@@ -50,10 +50,63 @@
   opacity: 0.6;
   position: fixed;
   top: 20px;
-  left: 15px;
+  left: 12px;
   cursor: pointer;
 }
 .menu-toggle-btn:hover {
   opacity: 0.7;
   transform: scale(1.05);
+}
+.menu-icon {
+  font-size: 30px;
+  color: #cc0042;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.menu-icon:hover {
+  opacity: 0.7;
+  transform: scale(1.05);
+}
+
+.side-menu .menu-body {
+  margin: 80px 0;
+  text-align: right;
+  padding: 0 12px 5px 0;
+}
+.side-menu.active .menu-body {
+  text-align: left;
+  padding: 0 12px 0 12px;
+}
+.side-menu .menu-body p {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  transition: all ease 0.2s;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 8px 4px 8px 10px;
+}
+.side-menu.active .menu-body p:hover {
+  background: #e57fa054;
+}
+.side-menu.active .menu-body p {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+.side-menu .menu-body p span {
+  padding: 5px 5px 5px 20px;
+}
+.menu-logo {
+  display: flex;
+  margin: 28px 55px;
+  font-size: 18px;
+  font-weight: bold;
+  opacity: 0.8;
+  color: darkgray;
+  align-content: center;
+  justify-content: center;
+}
+.menu-logo img {
+  margin: 0px 2px 2px 2px;
 }
