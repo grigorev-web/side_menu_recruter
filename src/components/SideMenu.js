@@ -1,11 +1,22 @@
+import { FaBars, FaTimes } from "react-icons/fa";
+import { reducer } from "../store/reducer";
+
+//<div className={`side-menu ${props.active ? "active" : ""}`}>
 export default function SideMenu(props) {
+  const MenuBars = () => {
+    if (!!props.active) {
+      return <FaTimes className="menu-toggle-btn" />;
+    } else {
+      return <FaBars className="menu-toggle-btn" />;
+    }
+  };
+
   return (
-    <div
-      className={`side-menu ${props.active ? "active" : ""}`}
-      onMouseEnter={props.mouseEnter}
-      onMouseLeave={props.mouseLeave}
-    >
+    <div className={`side-menu ${props.active ? "active" : ""}`}>
       <p>Side Menu</p>
+      <div className="menu-toggle-btn-wrapper" onClick={props.onToggleMenuBtn}>
+        <MenuBars />
+      </div>
     </div>
   );
 }

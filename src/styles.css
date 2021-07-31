@@ -44,11 +44,16 @@
   width: 50%;
   margin: 20px 5px 20px 80px;
 }
-.side-info {
+.menu-toggle-btn {
+  font-size: 35px;
+  color: #cc0042;
+  opacity: 0.6;
   position: fixed;
-  background: yellow;
-  height: 100%;
-  top: 0;
-  right: 0;
-  width: 30%;
+  top: 20px;
+  left: 15px;
+  cursor: pointer;
+}
+.menu-toggle-btn:hover {
+  opacity: 0.7;
+  transform: scale(1.05);
 }
