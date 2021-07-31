@@ -20,7 +20,7 @@
 
 .App.shading:after {
   opacity: 1;
-  z-index: 1;
+  z-index: 2;
 }
 .side-menu {
   background: white;

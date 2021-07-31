@@ -9,7 +9,7 @@ export function reducer(state, action) {
           active: !state.sideMenu.active
         }
       };
-    case "SIDE_MENU_OUT":
+    case "CLICK_OUTSIDE_MENU":
       return {
         ...state,
         appShadow: false,
@@ -18,6 +18,7 @@ export function reducer(state, action) {
           active: false
         }
       };
+
     default:
       throw new Error();
   }
