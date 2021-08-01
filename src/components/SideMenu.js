@@ -13,6 +13,7 @@ import {
 import { reducer } from "../store/reducer";
 import OutsideAlerter from "./OutsideAlerter";
 import msContactLogo from "../static/img/favicon.png";
+import { Link } from "react-router-dom";
 
 export default function SideMenu(props) {
   const MenuBars = () => {
@@ -44,24 +45,36 @@ export default function SideMenu(props) {
             <div className="menu-user-name">Григорьев Д.В.</div>
             <div className="menu-user-role">Оператор</div>
           </div>
-          <p>
-            <FaHeadset className="menu-icon" /> <span>Оператор</span>
-          </p>
-          <p>
-            <FaUsers className="menu-icon" /> <span>Рекрутер</span>
-          </p>
-          <p>
-            <FaUserShield className="menu-icon" /> <span>Администратор</span>
-          </p>
-          <p>
-            <FaChartPie className="menu-icon" /> <span>Статистка</span>
-          </p>
-          <p>
-            <FaCog className="menu-icon" /> <span>Настройки</span>
-          </p>
-          <p>
-            <FaSignOutAlt className="menu-icon" /> <span>Выйти</span>
-          </p>
+          <Link to="/operator">
+            <p>
+              <FaHeadset className="menu-icon" /> <span>Оператор</span>
+            </p>
+          </Link>
+          <Link to="/recruter">
+            <p>
+              <FaUsers className="menu-icon" /> <span>Рекрутер</span>
+            </p>
+          </Link>
+          <Link to="/admin">
+            <p>
+              <FaUserShield className="menu-icon" /> <span>Администратор</span>
+            </p>
+          </Link>
+          <Link to="/stat">
+            <p>
+              <FaChartPie className="menu-icon" /> <span>Статистка</span>
+            </p>
+          </Link>
+          <Link to="/settings">
+            <p>
+              <FaCog className="menu-icon" /> <span>Настройки</span>
+            </p>
+          </Link>
+          <Link to="/logout">
+            <p>
+              <FaSignOutAlt className="menu-icon" /> <span>Выйти</span>
+            </p>
+          </Link>
         </div>
       </div>
     </OutsideAlerter>
